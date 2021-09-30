@@ -12,6 +12,8 @@ Simple and beautiful GUI program that implements the main Scientific Calculator 
 - Appropriate input validation has been made.
 - Displaying messages to the user to explain any wrong inputs.
 
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `Coding is not finished, Only the UI.`
+
 ## Screenshots
 
 ![](Screenshots/ui_1.png)
