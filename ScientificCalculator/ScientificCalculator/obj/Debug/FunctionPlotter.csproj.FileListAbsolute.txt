@@ -1,0 +1,10 @@
+C:\Users\20114\Documents\Visual Studio 2019\Projects\FunctionPlotter\FunctionPlotter\bin\Debug\FunctionPlotter.exe.config
+C:\Users\20114\Documents\Visual Studio 2019\Projects\FunctionPlotter\FunctionPlotter\bin\Debug\FunctionPlotter.exe
+C:\Users\20114\Documents\Visual Studio 2019\Projects\FunctionPlotter\FunctionPlotter\bin\Debug\FunctionPlotter.pdb
+C:\Users\20114\Documents\Visual Studio 2019\Projects\FunctionPlotter\FunctionPlotter\obj\Debug\FunctionPlotter.csproj.AssemblyReference.cache
+C:\Users\20114\Documents\Visual Studio 2019\Projects\FunctionPlotter\FunctionPlotter\obj\Debug\FunctionPlotter.PlotterForm.resources
+C:\Users\20114\Documents\Visual Studio 2019\Projects\FunctionPlotter\FunctionPlotter\obj\Debug\FunctionPlotter.Properties.Resources.resources
+C:\Users\20114\Documents\Visual Studio 2019\Projects\FunctionPlotter\FunctionPlotter\obj\Debug\FunctionPlotter.csproj.GenerateResource.cache
+C:\Users\20114\Documents\Visual Studio 2019\Projects\FunctionPlotter\FunctionPlotter\obj\Debug\FunctionPlotter.csproj.CoreCompileInputs.cache
+C:\Users\20114\Documents\Visual Studio 2019\Projects\FunctionPlotter\FunctionPlotter\obj\Debug\FunctionPlotter.exe
+C:\Users\20114\Documents\Visual Studio 2019\Projects\FunctionPlotter\FunctionPlotter\obj\Debug\FunctionPlotter.pdb
