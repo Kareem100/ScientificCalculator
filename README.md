@@ -1,6 +1,6 @@
 # ScientificCalculator
 Simple and beautiful GUI program that implements the main Scientific Calculator Mathematical Operations.
-* @author Kareem Sherif
+* @author [Kareem Sherif](https://www.linkedin.com/in/kareem-sherif-4623b920b/)
 * @version 1.0
 * @since 2021-10-01
 
