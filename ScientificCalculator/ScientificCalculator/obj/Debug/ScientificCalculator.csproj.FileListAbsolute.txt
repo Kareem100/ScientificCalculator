@@ -8,3 +8,13 @@ C:\Users\20114\Documents\Visual Studio 2019\Projects\ScientificCalculator\Scient
 C:\Users\20114\Documents\Visual Studio 2019\Projects\ScientificCalculator\ScientificCalculator\obj\Debug\ScientificCalculator.csproj.CoreCompileInputs.cache
 C:\Users\20114\Documents\Visual Studio 2019\Projects\ScientificCalculator\ScientificCalculator\obj\Debug\FunctionPlotter.exe
 C:\Users\20114\Documents\Visual Studio 2019\Projects\ScientificCalculator\ScientificCalculator\obj\Debug\FunctionPlotter.pdb
+E:\Projects\VisualStudioProjects\ScientificCalculator\ScientificCalculator\bin\Debug\FunctionPlotter.exe.config
+E:\Projects\VisualStudioProjects\ScientificCalculator\ScientificCalculator\bin\Debug\FunctionPlotter.exe
+E:\Projects\VisualStudioProjects\ScientificCalculator\ScientificCalculator\bin\Debug\FunctionPlotter.pdb
+E:\Projects\VisualStudioProjects\ScientificCalculator\ScientificCalculator\obj\Debug\ScientificCalculator.csproj.AssemblyReference.cache
+E:\Projects\VisualStudioProjects\ScientificCalculator\ScientificCalculator\obj\Debug\ScientificCalculator.MainForm.resources
+E:\Projects\VisualStudioProjects\ScientificCalculator\ScientificCalculator\obj\Debug\FunctionPlotter.Properties.Resources.resources
+E:\Projects\VisualStudioProjects\ScientificCalculator\ScientificCalculator\obj\Debug\ScientificCalculator.csproj.GenerateResource.cache
+E:\Projects\VisualStudioProjects\ScientificCalculator\ScientificCalculator\obj\Debug\ScientificCalculator.csproj.CoreCompileInputs.cache
+E:\Projects\VisualStudioProjects\ScientificCalculator\ScientificCalculator\obj\Debug\FunctionPlotter.exe
+E:\Projects\VisualStudioProjects\ScientificCalculator\ScientificCalculator\obj\Debug\FunctionPlotter.pdb

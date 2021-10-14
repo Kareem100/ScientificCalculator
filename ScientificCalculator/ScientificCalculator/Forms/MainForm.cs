@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -32,6 +33,7 @@ namespace ScientificCalculator
 
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
         }
+
 
         #region MOVABLE_BORDERLESS_FORM
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -73,5 +75,106 @@ namespace ScientificCalculator
         // ===================================================================================== //
         #endregion
 
+        #region HANDLE_USER_INPUT
+        private void numericalInput_Click(object sender, EventArgs e)
+        {
+            manageCharacter(char.Parse((sender as Button).Text));
+            toBeFocused.Focus();
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            int digit = e.KeyValue - 96;
+            if (digit > -1 && digit < 10)
+                manageCharacter(char.Parse(digit.ToString()));
+            else 
+                switch (e.KeyCode)
+                {
+                    case Keys.Add:
+                        manageCharacter('+');
+                        break;
+                    case Keys.Subtract:
+                        manageCharacter('-');
+                        break;
+                    case Keys.Multiply:
+                        manageCharacter('×');
+                        break;
+                    case Keys.Divide:
+                        manageCharacter('÷');
+                        break;
+                    case Keys.Escape:
+                        clear();
+                        break;
+                    case Keys.Enter:
+                        evaluate();
+                        break;
+                }
+        }
+
+        private void ceButton_Click(object sender, EventArgs e)
+        {
+            answerLabel.Text = "0";
+        }
+
+        private void cButton_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
+
+        private void eqButton_Click(object sender, EventArgs e)
+        {
+            evaluate();
+        }
+
+        private bool lastCharIsDigit = true;
+        private void manageCharacter(char c)
+        {
+            if (char.IsDigit(c))
+            {
+                string currentPlaceHolder = answerLabel.Text;
+                if (!lastCharIsDigit)
+                {
+                    operationsLabel.Text = operationsLabel.Text + answerLabel.Text + " ";
+                    currentPlaceHolder = "0";
+                }
+                int number = int.Parse(currentPlaceHolder);
+                number = number * 10 + (c - '0');
+                answerLabel.Text = number.ToString();
+                lastCharIsDigit = true;
+            }
+            else
+            {
+                if (lastCharIsDigit)
+                    operationsLabel.Text = operationsLabel.Text + answerLabel.Text + " ";
+
+                answerLabel.Text = c.ToString();
+                lastCharIsDigit = false;
+            }
+        }
+
+        private void clear()
+        {
+            answerLabel.Text = "0";
+            operationsLabel.Text = "";
+            lastCharIsDigit = true;
+        }
+
+        private void evaluate()
+        {
+            operationsLabel.Text = operationsLabel.Text + answerLabel.Text;
+            string operation = "";
+
+            for (int i = 0; i < operationsLabel.Text.Length; ++i)
+                if (operationsLabel.Text[i] == '×')
+                    operation += '*';
+                else if (operationsLabel.Text[i] == '÷')
+                    operation += '/';
+                else
+                    operation += operationsLabel.Text[i];
+
+            answerLabel.Text = (new DataTable().Compute(operation, null)).ToString();
+        }
+        #endregion
+        
     }
 }
