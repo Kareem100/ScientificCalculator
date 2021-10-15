@@ -37,7 +37,7 @@ namespace ScientificCalculator
             this.calculationsScreenPanel = new System.Windows.Forms.Panel();
             this.answerLabelHolder = new System.Windows.Forms.TableLayoutPanel();
             this.answerLabel = new System.Windows.Forms.Label();
-            this.operationsLableHolder = new System.Windows.Forms.TableLayoutPanel();
+            this.operationsLabelHolder = new System.Windows.Forms.TableLayoutPanel();
             this.operationsLabel = new System.Windows.Forms.Label();
             this.toBeFocused = new System.Windows.Forms.Label();
             this.advancedOperationsTable = new System.Windows.Forms.TableLayoutPanel();
@@ -79,7 +79,7 @@ namespace ScientificCalculator
             this.titlebarPanel.SuspendLayout();
             this.calculationsScreenPanel.SuspendLayout();
             this.answerLabelHolder.SuspendLayout();
-            this.operationsLableHolder.SuspendLayout();
+            this.operationsLabelHolder.SuspendLayout();
             this.advancedOperationsTable.SuspendLayout();
             this.numbersInputHolder.SuspendLayout();
             this.SuspendLayout();
@@ -154,7 +154,7 @@ namespace ScientificCalculator
             // 
             this.calculationsScreenPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(92)))), ((int)(((byte)(104)))));
             this.calculationsScreenPanel.Controls.Add(this.answerLabelHolder);
-            this.calculationsScreenPanel.Controls.Add(this.operationsLableHolder);
+            this.calculationsScreenPanel.Controls.Add(this.operationsLabelHolder);
             this.calculationsScreenPanel.Controls.Add(this.toBeFocused);
             this.calculationsScreenPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.calculationsScreenPanel.Location = new System.Drawing.Point(0, 35);
@@ -184,7 +184,7 @@ namespace ScientificCalculator
             // 
             this.answerLabel.AutoSize = true;
             this.answerLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.answerLabel.Font = new System.Drawing.Font("URWImperialTExtBol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answerLabel.Font = new System.Drawing.Font("URWImperialTExtBol", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answerLabel.ForeColor = System.Drawing.Color.White;
             this.answerLabel.Location = new System.Drawing.Point(3, 0);
             this.answerLabel.Name = "answerLabel";
@@ -194,22 +194,22 @@ namespace ScientificCalculator
             this.answerLabel.Text = "0";
             this.answerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // operationsLableHolder
+            // operationsLabelHolder
             // 
-            this.operationsLableHolder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.operationsLabelHolder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.operationsLableHolder.ColumnCount = 1;
-            this.operationsLableHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.operationsLableHolder.Controls.Add(this.operationsLabel, 0, 0);
-            this.operationsLableHolder.Location = new System.Drawing.Point(12, 20);
-            this.operationsLableHolder.Name = "operationsLableHolder";
-            this.operationsLableHolder.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.operationsLableHolder.RowCount = 1;
-            this.operationsLableHolder.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.operationsLableHolder.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.operationsLableHolder.Size = new System.Drawing.Size(448, 42);
-            this.operationsLableHolder.TabIndex = 2;
+            this.operationsLabelHolder.ColumnCount = 1;
+            this.operationsLabelHolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.operationsLabelHolder.Controls.Add(this.operationsLabel, 0, 0);
+            this.operationsLabelHolder.Location = new System.Drawing.Point(12, 20);
+            this.operationsLabelHolder.Name = "operationsLabelHolder";
+            this.operationsLabelHolder.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.operationsLabelHolder.RowCount = 1;
+            this.operationsLabelHolder.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.operationsLabelHolder.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.operationsLabelHolder.Size = new System.Drawing.Size(448, 42);
+            this.operationsLabelHolder.TabIndex = 2;
             // 
             // operationsLabel
             // 
@@ -875,8 +875,8 @@ namespace ScientificCalculator
             this.calculationsScreenPanel.PerformLayout();
             this.answerLabelHolder.ResumeLayout(false);
             this.answerLabelHolder.PerformLayout();
-            this.operationsLableHolder.ResumeLayout(false);
-            this.operationsLableHolder.PerformLayout();
+            this.operationsLabelHolder.ResumeLayout(false);
+            this.operationsLabelHolder.PerformLayout();
             this.advancedOperationsTable.ResumeLayout(false);
             this.numbersInputHolder.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -891,7 +891,7 @@ namespace ScientificCalculator
         private System.Windows.Forms.Button maximizeButton;
         private System.Windows.Forms.Panel calculationsScreenPanel;
         private System.Windows.Forms.Label operationsLabel;
-        private System.Windows.Forms.TableLayoutPanel operationsLableHolder;
+        private System.Windows.Forms.TableLayoutPanel operationsLabelHolder;
         private System.Windows.Forms.TableLayoutPanel advancedOperationsTable;
         private System.Windows.Forms.Button squareRootButton;
         private System.Windows.Forms.Button rightParanthButton;

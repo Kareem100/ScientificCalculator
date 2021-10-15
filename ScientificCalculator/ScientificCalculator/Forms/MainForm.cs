@@ -127,16 +127,26 @@ namespace ScientificCalculator
         }
 
         private bool lastCharIsDigit = true;
+        private bool enterIsPressed = false;
+
         private void manageCharacter(char c)
         {
             if (char.IsDigit(c))
             {
                 string currentPlaceHolder = answerLabel.Text;
-                if (!lastCharIsDigit)
+                if (enterIsPressed)
+                {
+                    currentPlaceHolder = "0";
+                    operationsLabel.Text = "";
+                    enterIsPressed = false;
+                }
+
+                else if (!lastCharIsDigit)
                 {
                     operationsLabel.Text = operationsLabel.Text + answerLabel.Text + " ";
                     currentPlaceHolder = "0";
                 }
+
                 int number = int.Parse(currentPlaceHolder);
                 number = number * 10 + (c - '0');
                 answerLabel.Text = number.ToString();
@@ -144,7 +154,13 @@ namespace ScientificCalculator
             }
             else
             {
-                if (lastCharIsDigit)
+                if (enterIsPressed)
+                {
+                    operationsLabel.Text = answerLabel.Text + " ";
+                    enterIsPressed = false;
+                }
+
+                else if (lastCharIsDigit)
                     operationsLabel.Text = operationsLabel.Text + answerLabel.Text + " ";
 
                 answerLabel.Text = c.ToString();
@@ -157,6 +173,7 @@ namespace ScientificCalculator
             answerLabel.Text = "0";
             operationsLabel.Text = "";
             lastCharIsDigit = true;
+            enterIsPressed = false;
         }
 
         private void evaluate()
@@ -173,6 +190,8 @@ namespace ScientificCalculator
                     operation += operationsLabel.Text[i];
 
             answerLabel.Text = (new DataTable().Compute(operation, null)).ToString();
+            operationsLabel.Text += " =";
+            enterIsPressed = true;
         }
         #endregion
         
