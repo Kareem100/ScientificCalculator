@@ -76,6 +76,7 @@ namespace ScientificCalculator
             this.mulButton = new System.Windows.Forms.Button();
             this.subButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.titlebarPanel.SuspendLayout();
             this.calculationsScreenPanel.SuspendLayout();
             this.answerLabelHolder.SuspendLayout();
@@ -87,6 +88,7 @@ namespace ScientificCalculator
             // titlebarPanel
             // 
             this.titlebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.titlebarPanel.Controls.Add(this.label1);
             this.titlebarPanel.Controls.Add(this.minimizeButton);
             this.titlebarPanel.Controls.Add(this.maximizeButton);
             this.titlebarPanel.Controls.Add(this.closeButton);
@@ -855,6 +857,18 @@ namespace ScientificCalculator
             this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.numericalInput_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("URWImperialTExtBol", 14F);
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(3, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 23);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Calculator";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titlebarPanel_MouseDown);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -871,6 +885,7 @@ namespace ScientificCalculator
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.titlebarPanel.ResumeLayout(false);
+            this.titlebarPanel.PerformLayout();
             this.calculationsScreenPanel.ResumeLayout(false);
             this.calculationsScreenPanel.PerformLayout();
             this.answerLabelHolder.ResumeLayout(false);
@@ -931,6 +946,7 @@ namespace ScientificCalculator
         private System.Windows.Forms.TableLayoutPanel answerLabelHolder;
         private System.Windows.Forms.Label answerLabel;
         private System.Windows.Forms.Label toBeFocused;
+        private System.Windows.Forms.Label label1;
     }
 }
 
