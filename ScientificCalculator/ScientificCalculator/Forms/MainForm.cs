@@ -79,7 +79,7 @@ namespace ScientificCalculator
         private void numericalInput_Click(object sender, EventArgs e)
         {
             manageCharacter(char.Parse((sender as Button).Text));
-            toBeFocused.Focus();
+            ActiveControl = null;
         }
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
@@ -114,16 +114,19 @@ namespace ScientificCalculator
         private void ceButton_Click(object sender, EventArgs e)
         {
             answerLabel.Text = "0";
+            ActiveControl = null;
         }
 
         private void cButton_Click(object sender, EventArgs e)
         {
             clear();
+            ActiveControl = null;
         }
 
         private void eqButton_Click(object sender, EventArgs e)
         {
             evaluate();
+            ActiveControl = null;
         }
 
         private bool lastCharIsDigit = true;

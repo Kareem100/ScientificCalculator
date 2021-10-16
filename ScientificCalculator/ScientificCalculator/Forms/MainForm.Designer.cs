@@ -39,7 +39,6 @@ namespace ScientificCalculator
             this.answerLabel = new System.Windows.Forms.Label();
             this.operationsLabelHolder = new System.Windows.Forms.TableLayoutPanel();
             this.operationsLabel = new System.Windows.Forms.Label();
-            this.toBeFocused = new System.Windows.Forms.Label();
             this.advancedOperationsTable = new System.Windows.Forms.TableLayoutPanel();
             this.squareRootButton = new System.Windows.Forms.Button();
             this.rightParanthButton = new System.Windows.Forms.Button();
@@ -76,7 +75,7 @@ namespace ScientificCalculator
             this.mulButton = new System.Windows.Forms.Button();
             this.subButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.titlebarPanel.SuspendLayout();
             this.calculationsScreenPanel.SuspendLayout();
             this.answerLabelHolder.SuspendLayout();
@@ -88,7 +87,7 @@ namespace ScientificCalculator
             // titlebarPanel
             // 
             this.titlebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
-            this.titlebarPanel.Controls.Add(this.label1);
+            this.titlebarPanel.Controls.Add(this.titleLabel);
             this.titlebarPanel.Controls.Add(this.minimizeButton);
             this.titlebarPanel.Controls.Add(this.maximizeButton);
             this.titlebarPanel.Controls.Add(this.closeButton);
@@ -157,12 +156,11 @@ namespace ScientificCalculator
             this.calculationsScreenPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(92)))), ((int)(((byte)(104)))));
             this.calculationsScreenPanel.Controls.Add(this.answerLabelHolder);
             this.calculationsScreenPanel.Controls.Add(this.operationsLabelHolder);
-            this.calculationsScreenPanel.Controls.Add(this.toBeFocused);
             this.calculationsScreenPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.calculationsScreenPanel.Location = new System.Drawing.Point(0, 35);
             this.calculationsScreenPanel.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.calculationsScreenPanel.Name = "calculationsScreenPanel";
-            this.calculationsScreenPanel.Size = new System.Drawing.Size(500, 120);
+            this.calculationsScreenPanel.Size = new System.Drawing.Size(500, 118);
             this.calculationsScreenPanel.TabIndex = 1;
             // 
             // answerLabelHolder
@@ -179,7 +177,7 @@ namespace ScientificCalculator
             this.answerLabelHolder.RowCount = 1;
             this.answerLabelHolder.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.answerLabelHolder.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.answerLabelHolder.Size = new System.Drawing.Size(448, 42);
+            this.answerLabelHolder.Size = new System.Drawing.Size(448, 40);
             this.answerLabelHolder.TabIndex = 3;
             // 
             // answerLabel
@@ -191,7 +189,7 @@ namespace ScientificCalculator
             this.answerLabel.Location = new System.Drawing.Point(3, 0);
             this.answerLabel.Name = "answerLabel";
             this.answerLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.answerLabel.Size = new System.Drawing.Size(442, 42);
+            this.answerLabel.Size = new System.Drawing.Size(442, 40);
             this.answerLabel.TabIndex = 0;
             this.answerLabel.Text = "0";
             this.answerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -210,7 +208,7 @@ namespace ScientificCalculator
             this.operationsLabelHolder.RowCount = 1;
             this.operationsLabelHolder.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.operationsLabelHolder.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.operationsLabelHolder.Size = new System.Drawing.Size(448, 42);
+            this.operationsLabelHolder.Size = new System.Drawing.Size(448, 40);
             this.operationsLabelHolder.TabIndex = 2;
             // 
             // operationsLabel
@@ -222,17 +220,9 @@ namespace ScientificCalculator
             this.operationsLabel.Location = new System.Drawing.Point(3, 0);
             this.operationsLabel.Name = "operationsLabel";
             this.operationsLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.operationsLabel.Size = new System.Drawing.Size(442, 42);
+            this.operationsLabel.Size = new System.Drawing.Size(442, 40);
             this.operationsLabel.TabIndex = 0;
             this.operationsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // toBeFocused
-            // 
-            this.toBeFocused.AutoSize = true;
-            this.toBeFocused.Location = new System.Drawing.Point(12, 72);
-            this.toBeFocused.Name = "toBeFocused";
-            this.toBeFocused.Size = new System.Drawing.Size(0, 20);
-            this.toBeFocused.TabIndex = 4;
             // 
             // advancedOperationsTable
             // 
@@ -257,7 +247,7 @@ namespace ScientificCalculator
             this.advancedOperationsTable.Controls.Add(this.expButton, 2, 1);
             this.advancedOperationsTable.Controls.Add(this.percButton, 2, 2);
             this.advancedOperationsTable.Dock = System.Windows.Forms.DockStyle.Right;
-            this.advancedOperationsTable.Location = new System.Drawing.Point(333, 155);
+            this.advancedOperationsTable.Location = new System.Drawing.Point(333, 153);
             this.advancedOperationsTable.Name = "advancedOperationsTable";
             this.advancedOperationsTable.RowCount = 5;
             this.advancedOperationsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -265,7 +255,7 @@ namespace ScientificCalculator
             this.advancedOperationsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.advancedOperationsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.advancedOperationsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.advancedOperationsTable.Size = new System.Drawing.Size(167, 245);
+            this.advancedOperationsTable.Size = new System.Drawing.Size(167, 247);
             this.advancedOperationsTable.TabIndex = 2;
             // 
             // squareRootButton
@@ -277,7 +267,7 @@ namespace ScientificCalculator
             this.squareRootButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.squareRootButton.Location = new System.Drawing.Point(115, 199);
             this.squareRootButton.Name = "squareRootButton";
-            this.squareRootButton.Size = new System.Drawing.Size(49, 43);
+            this.squareRootButton.Size = new System.Drawing.Size(49, 45);
             this.squareRootButton.TabIndex = 17;
             this.squareRootButton.TabStop = false;
             this.squareRootButton.Text = "√";
@@ -292,7 +282,7 @@ namespace ScientificCalculator
             this.rightParanthButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.rightParanthButton.Location = new System.Drawing.Point(57, 199);
             this.rightParanthButton.Name = "rightParanthButton";
-            this.rightParanthButton.Size = new System.Drawing.Size(52, 43);
+            this.rightParanthButton.Size = new System.Drawing.Size(52, 45);
             this.rightParanthButton.TabIndex = 16;
             this.rightParanthButton.TabStop = false;
             this.rightParanthButton.Text = ")";
@@ -307,7 +297,7 @@ namespace ScientificCalculator
             this.leftParanthButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.leftParanthButton.Location = new System.Drawing.Point(3, 199);
             this.leftParanthButton.Name = "leftParanthButton";
-            this.leftParanthButton.Size = new System.Drawing.Size(48, 43);
+            this.leftParanthButton.Size = new System.Drawing.Size(48, 45);
             this.leftParanthButton.TabIndex = 15;
             this.leftParanthButton.TabStop = false;
             this.leftParanthButton.Text = "(";
@@ -522,7 +512,7 @@ namespace ScientificCalculator
             this.numbersInputHolder.Controls.Add(this.subButton, 3, 2);
             this.numbersInputHolder.Controls.Add(this.addButton, 3, 3);
             this.numbersInputHolder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numbersInputHolder.Location = new System.Drawing.Point(0, 155);
+            this.numbersInputHolder.Location = new System.Drawing.Point(0, 153);
             this.numbersInputHolder.Name = "numbersInputHolder";
             this.numbersInputHolder.RowCount = 5;
             this.numbersInputHolder.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -531,7 +521,7 @@ namespace ScientificCalculator
             this.numbersInputHolder.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.numbersInputHolder.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.numbersInputHolder.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.numbersInputHolder.Size = new System.Drawing.Size(333, 245);
+            this.numbersInputHolder.Size = new System.Drawing.Size(333, 247);
             this.numbersInputHolder.TabIndex = 3;
             // 
             // eqButton
@@ -545,7 +535,7 @@ namespace ScientificCalculator
             this.eqButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.eqButton.Location = new System.Drawing.Point(169, 199);
             this.eqButton.Name = "eqButton";
-            this.eqButton.Size = new System.Drawing.Size(161, 43);
+            this.eqButton.Size = new System.Drawing.Size(161, 45);
             this.eqButton.TabIndex = 17;
             this.eqButton.TabStop = false;
             this.eqButton.Text = "=";
@@ -562,7 +552,7 @@ namespace ScientificCalculator
             this._0Button.ForeColor = System.Drawing.Color.WhiteSmoke;
             this._0Button.Location = new System.Drawing.Point(86, 199);
             this._0Button.Name = "_0Button";
-            this._0Button.Size = new System.Drawing.Size(77, 43);
+            this._0Button.Size = new System.Drawing.Size(77, 45);
             this._0Button.TabIndex = 16;
             this._0Button.TabStop = false;
             this._0Button.Text = "0";
@@ -579,7 +569,7 @@ namespace ScientificCalculator
             this.pointButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.pointButton.Location = new System.Drawing.Point(3, 199);
             this.pointButton.Name = "pointButton";
-            this.pointButton.Size = new System.Drawing.Size(77, 43);
+            this.pointButton.Size = new System.Drawing.Size(77, 45);
             this.pointButton.TabIndex = 15;
             this.pointButton.TabStop = false;
             this.pointButton.Text = ".";
@@ -857,17 +847,17 @@ namespace ScientificCalculator
             this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.numericalInput_Click);
             // 
-            // label1
+            // titleLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("URWImperialTExtBol", 14F);
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(3, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 23);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Calculator";
-            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titlebarPanel_MouseDown);
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("URWImperialTExtBol", 14F);
+            this.titleLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.titleLabel.Location = new System.Drawing.Point(3, 6);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(99, 23);
+            this.titleLabel.TabIndex = 4;
+            this.titleLabel.Text = "Calculator";
+            this.titleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titlebarPanel_MouseDown);
             // 
             // MainForm
             // 
@@ -887,7 +877,6 @@ namespace ScientificCalculator
             this.titlebarPanel.ResumeLayout(false);
             this.titlebarPanel.PerformLayout();
             this.calculationsScreenPanel.ResumeLayout(false);
-            this.calculationsScreenPanel.PerformLayout();
             this.answerLabelHolder.ResumeLayout(false);
             this.answerLabelHolder.PerformLayout();
             this.operationsLabelHolder.ResumeLayout(false);
@@ -945,8 +934,7 @@ namespace ScientificCalculator
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.TableLayoutPanel answerLabelHolder;
         private System.Windows.Forms.Label answerLabel;
-        private System.Windows.Forms.Label toBeFocused;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label titleLabel;
     }
 }
 
